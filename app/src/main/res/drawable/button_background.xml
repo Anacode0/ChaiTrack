@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:drawable="@color/colorPrimary" android:state_pressed="true"/>
+
+    <!-- Checked/Selected state -->
+    <item android:drawable="@color/primary" android:state_checked="true"/>
+    <item android:drawable="@color/success_color" android:state_selected="true"/>
+
+    <!-- Focused state -->
+    <item android:drawable="@color/teal_800" android:state_focused="true"/>
+
+    <!-- Enabled state -->
+    <item android:drawable="@color/teal_200" android:state_enabled="true"/>
+
+    <!-- Disabled state -->
+    <item android:drawable="@color/gray_dark" android:state_enabled="false"/>
+
+    <!-- Default state -->
+    <item android:drawable="@color/gray_dark"/>
+</selector>

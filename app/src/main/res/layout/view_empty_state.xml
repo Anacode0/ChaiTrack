@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="48dp">
+
+    <!-- Empty State Icon -->
+    <ImageView
+        android:id="@+id/ivEmptyStateIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/empty_state_icon" />
+
+    <!-- Empty State Title -->
+    <TextView
+        android:id="@+id/tvEmptyStateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="No Items"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <!-- Empty State Message -->
+    <TextView
+        android:id="@+id/tvEmptyStateMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="There's nothing to display here yet."
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp" />
+
+    <!-- Action Button -->
+    <Button
+        android:id="@+id/btnEmptyStateAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Action"
+        android:visibility="gone"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules xmlns:android="http://schemas.android.com/apk/res/android">
+    <cloud-backup>
+        <include domain="database" path="chats.db"/>
+        <include domain="database" path="users.db"/>
+        <include domain="sharedpref" path="user_settings.xml"/>
+    </cloud-backup>
+
+    <device-transfer>
+        <include domain="file" path="."/>
+        <include domain="database" path="."/>
+        <include domain="sharedpref" path="."/>
+        <exclude domain="file" path="cache/"/>
+        <exclude domain="file" path="temp_downloads/"/>
+        <exclude domain="file" path="media_cache/"/>
+    </device-transfer>
+</data-extraction-rules>

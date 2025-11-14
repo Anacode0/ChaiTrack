@@ -1,0 +1,13 @@
+<device-transfer>
+    <include domain="file" path="."/>
+    <include domain="database" path="."/>
+    <include domain="sharedpref" path="."/>
+
+    <exclude domain="file" path="cache/"/>
+    <exclude domain="file" path="temp/"/>
+    <exclude domain="file" path="image_cache/"/>
+
+    <exclude domain="database" path="temp_sessions.db"/>
+    <exclude domain="database" path="encryption_keys.db"/>
+    <exclude domain="sharedpref" path="auth_tokens.xml"/>
+</device-transfer>

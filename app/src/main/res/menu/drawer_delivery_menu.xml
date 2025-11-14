@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Header Section -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_deliveries"
+            android:icon="@drawable/ic_delivery"
+            android:title="@string/deliveries" />
+
+        <item
+            android:id="@+id/nav_fertilizers"
+            android:icon="@drawable/ic_fertilizer"
+            android:title="@string/fertilizer" />
+
+        <item
+            android:id="@+id/nav_finance"
+            android:icon="@drawable/ic_finance"
+            android:title="@string/finance_and_transcripts" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="@string/notifications" />
+    </group>
+
+    <!-- Separator -->
+    <item android:title="@string/action_settings">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="@string/my_profile" />
+
+            <item
+                android:id="@+id/nav_change_pin"
+                android:icon="@drawable/ic_lock"
+                android:title="@string/change_pin" />
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/help_support" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+</menu>

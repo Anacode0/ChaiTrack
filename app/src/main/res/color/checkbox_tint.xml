@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked states -->
+    <item android:color="@color/teal_700" android:state_checked="true" android:state_enabled="true"/>
+    <item android:color="@color/teal_700" android:state_checked="true" android:state_pressed="true"/>
+
+    <!-- Error states -->
+    <item android:color="@color/red_dark" android:state_checked="true" />
+    <item android:color="@color/red_light" android:state_checked="false"/>
+
+    <!-- Disabled states -->
+    <item android:color="@color/gray_light" android:state_checked="true" android:state_enabled="false"/>
+    <item android:color="@color/gray_light" android:state_checked="false" android:state_enabled="false"/>
+
+    <!-- Default unchecked state -->
+    <item android:color="@color/gray_dark"/>
+</selector>

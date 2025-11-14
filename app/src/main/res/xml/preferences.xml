@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="General Settings">
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:summary="Receive push notifications"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="theme"
+            android:title="App Theme"
+            android:summary="Choose your preferred theme"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="light" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Account">
+
+        <EditTextPreference
+            android:key="username"
+            android:title="Username"
+            android:summary="Set your display name"
+            android:dialogTitle="Enter username" />
+
+        <Preference
+            android:title="Privacy Policy"
+            android:key="privacy_policy"
+            android:summary="View our privacy policy" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

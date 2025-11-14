@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Color -->
+    <item android:drawable="@color/purple_700"/>
+
+    <!-- App Logo/Icon -->
+    <item
+        android:width="120dp"
+        android:height="120dp"
+        android:drawable="@drawable/ic_app_logo"
+        android:gravity="center" />
+
+    <!-- App Name -->
+    <item
+        android:top="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center" />
+    </item>
+
+    <!-- App Tagline -->
+    <item
+        android:top="220dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_tagline"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:layout_gravity="center" />
+    </item>
+
+</layer-list>

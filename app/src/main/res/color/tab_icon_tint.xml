@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected/Active tab icon color -->
+    <item android:color="@color/teal_700" android:state_selected="true"/>
+    <item android:color="@color/teal_700" android:state_checked="true"/>
+
+    <!-- Unselected/Inactive tab icon color -->
+    <item android:color="@color/gray_dark" android:state_selected="false"/>
+
+    <!-- Disabled state -->
+    <item android:color="@color/gray_light" android:state_enabled="false"/>
+</selector>

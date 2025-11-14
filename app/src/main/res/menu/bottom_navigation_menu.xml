@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_deliveries"
+        android:enabled="true"
+        android:icon="@drawable/ic_deliveries"
+        android:title="@string/deliveries"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_fertilizers"
+        android:enabled="true"
+        android:icon="@drawable/ic_fertilizer"
+        android:title="@string/apply_fertilizers"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_transcripts"
+        android:enabled="true"
+        android:icon="@drawable/ic_finance"
+        android:title="@string/transcripts"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:enabled="true"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/notifications"
+        app:actionLayout="@layout/notification_badge"
+        app:showAsAction="ifRoom" />
+
+</menu>

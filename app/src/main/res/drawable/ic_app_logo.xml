@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="@color/white">
+
+    <!-- Tea Plant Base -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M12,21C12,21 5,15 5,10C5,6 8,3 12,3C16,3 19,6 19,10C19,15 12,21 12,21Z" />
+
+    <!-- Tea Leaf 1 -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M9,8C9,8 7,10 7,12C7,14 9,16 11,16C13,16 15,14 15,12C15,10 13,8 11,8C10,8 9,8 9,8Z" />
+
+    <!-- Tea Leaf 2 -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M13,8C13,8 15,10 15,12C15,14 13,16 11,16C9,16 7,14 7,12C7,10 9,8 11,8C12,8 13,8 13,8Z" />
+
+    <!-- Stem -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M12,3L12,8"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1" />
+
+</vector>

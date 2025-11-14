@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define custom color attributes -->
+    <attr name="colorWarning" format="color|reference" />
+    <attr name="colorSuccess" format="color|reference" />
+    <attr name="colorInfo" format="color|reference" />
+    <attr name="colorError" format="color|reference" />
+
+    <declare-styleable name="ErrorStateView">
+        <attr name="errorStateIcon" format="reference" />
+        <attr name="errorStateTitle" format="string" />
+        <attr name="errorStateMessage" format="string" />
+        <attr name="errorStatePrimaryText" format="string" />
+        <attr name="errorStateSecondaryText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="PinInputView">
+        <attr name="pinLength" format="integer" />
+        <attr name="masked" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PhoneNumberInputView">
+        <!-- System attributes -->
+        <attr name="android:hint" />
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:background" />
+
+        <!-- Custom attributes for phone number input -->
+        <attr name="countryCode" format="string" />
+        <attr name="showFlag" format="boolean" />
+        <attr name="required" format="boolean" />
+        <attr name="defaultCountry" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="EmptyStateView">
+        <attr name="emptyStateIcon" format="reference" />
+        <attr name="emptyStateTitle" format="string" />
+        <attr name="emptyStateMessage" format="string" />
+        <attr name="emptyStateActionText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <!-- System attributes -->
+        <attr name="android:hint" />
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:background" />
+        <attr name="android:maxLength" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLines" />
+        <attr name="android:minLines" />
+
+        <!-- Custom attributes -->
+        <attr name="startIcon" format="reference" />
+        <attr name="inputStyle" format="enum">
+            <enum name="text" value="0" />
+            <enum name="number" value="1" />
+            <enum name="phone" value="2" />
+            <enum name="pin" value="3" />
+            <enum name="email" value="4" />
+            <enum name="multiline" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <!-- CustomButton -->
+    <declare-styleable name="CustomButton">
+        <!-- System attributes -->
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:background" />
+
+        <!-- Custom attributes -->
+        <attr name="buttonText" format="string" />
+        <attr name="buttonIcon" format="reference" />
+    </declare-styleable>
+</resources>
