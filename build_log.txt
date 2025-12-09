@@ -1,0 +1,620 @@
+Initialized native services in: /root/.gradle/native
+Initialized jansi services in: /root/.gradle/native
+Found daemon DaemonInfo{pid=15347, address=[b97ed8ae-0925-4033-8c2d-6622f382718d port:39873, addresses:[/127.0.0.1]], state=Idle, lastBusy=1762544865204, context=DefaultDaemonContext[uid=ec924015-245a-4fcc-b983-ecddaa13ca79,javaHome=/opt/android-studio/jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=/root/.gradle/daemon,pid=15347,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=/usr/lib/jvm/java-21-openjdk-amd64 (no JDK specified, using current Java home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=ec924015-245a-4fcc-b983-ecddaa13ca79,javaHome=/opt/android-studio/jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=/root/.gradle/daemon,pid=15347,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 32389). The daemon log file: /root/.gradle/daemon/8.13/daemon-32389.out.log
+Starting 3rd build in daemon [uptime: 6 mins 46.686 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 2 GiB]
+Using 4 worker leases.
+Now considering [/home/n0fac3/BSIT_Commit/Research_Project/N0Face] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/home/n0fac3/BSIT_Commit/Research_Project/N0Face/settings.gradle.kts'.
+Projects loaded. Root project using build file '/home/n0fac3/BSIT_Commit/Research_Project/N0Face/build.gradle.kts'.
+Included projects: [root project 'ChaiTrack', project ':app']
+
+> Configure project :
+Evaluating root project 'ChaiTrack' using build file '/home/n0fac3/BSIT_Commit/Research_Project/N0Face/build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '8.12.3', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.0.0', apply: false]
+Resolved plugin [id: 'com.google.dagger.hilt.android', version: '2.57.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.0.0', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.0.0', apply: false]
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle.kts'
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by build file 'build.gradle.kts'
+
+> Configure project :app
+Evaluating project ':app' using build file '/home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build.gradle.kts'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'org.jetbrains.kotlin.android']
+Resolved plugin [id: 'kotlin-kapt']
+Resolved plugin [id: 'com.google.dagger.hilt.android']
+Resolved plugin [id: 'kotlin-parcelize']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.0.0']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+All projects evaluated.
+Task name matched 'assembleDebug'
+Selected primary task 'assembleDebug' from project :
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Tasks to be executed: [task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:dataBindingMergeDependencyArtifactsDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:parseDebugLocalResources', task ':app:dataBindingGenBaseClassesDebug', task ':app:generateDebugBuildConfig', task ':app:checkDebugAarMetadata', task ':app:mapDebugSourceSetPaths', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:kaptGenerateStubsDebugKotlin', task ':app:kaptDebugKotlin', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:l8DexDesugarLibDebug', task ':app:desugarDebugFileDependencies', task ':app:hiltAggregateDepsDebug', task ':app:hiltJavaCompileDebug', task ':app:transformDebugClassesWithAsm', task ':app:dexBuilderDebug', task ':app:mergeDebugGlobalSynthetics', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
+Tasks that were excluded: []
+Resolve mutations for :app:preBuild (Thread[#127,Execution worker,5,main]) started.
+:app:preBuild (Thread[#127,Execution worker,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#127,Execution worker,5,main]) started.
+:app:preDebugBuild (Thread[#126,included builds,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[#126,included builds,5,main]) started.
+:app:mergeDebugNativeDebugMetadata (Thread[#126,included builds,5,main]) started.
+
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#126,included builds,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[#126,included builds,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebug (Thread[#126,included builds,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebug (Thread[#126,included builds,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsDebug' as it is up-to-date.
+Resolve mutations for :app:generateDebugResValues (Thread[#126,included builds,5,main]) started.
+:app:generateDebugResValues (Thread[#126,included builds,5,main]) started.
+
+> Task :app:generateDebugResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResValues' as it is up-to-date.
+Resolve mutations for :app:generateDebugResources (Thread[#126,included builds,5,main]) started.
+:app:generateDebugResources (Thread[#126,included builds,5,main]) started.
+
+> Task :app:generateDebugResources UP-TO-DATE
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugResources (Thread[#126,included builds,5,main]) started.
+:app:mergeDebugResources (Thread[#126,included builds,5,main]) started.
+
+> Task :app:mergeDebugResources
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Task ':app:mergeDebugResources' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':app:mergeDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hi/values-hi.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hi_values-hi.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hr/values-hr.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hr_values-hr.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h480dp-v13/values-h480dp-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h480dp-v13_values-h480dp-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ldltr-v21_values-ldltr-v21.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w320dp-land-v13/values-w320dp-land-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-am/values-am.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-am_values-am.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt/values-pt.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt_values-pt.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hu/values-hu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hu_values-hu.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-as/values-as.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-as_values-as.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v16/values-v16.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v16_values-v16.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rHK_values-zh-rHK.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-iw/values-iw.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-iw_values-iw.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v21/values-v21.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v21_values-v21.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ja/values-ja.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ja_values-ja.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v22/values-v22.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v22_values-v22.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h360dp-land-v13/values-h360dp-land-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-be/values-be.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-be_values-be.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v24/values-v24.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v24_values-v24.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rCA_values-en-rCA.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v26/values-v26.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v26_values-v26.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-si/values-si.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-si_values-si.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bn/values-bn.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bn_values-bn.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v35/values-v35.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v35_values-v35.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kk/values-kk.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kk_values-kk.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-watch-v21_values-watch-v21.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hy/values-hy.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hy_values-hy.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v18/values-v18.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v18_values-v18.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ka/values-ka.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ka_values-ka.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-in/values-in.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-in_values-in.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw/values-sw.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw_values-sw.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-is/values-is.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-is_values-is.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sl/values-sl.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sl_values-sl.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rBR_values-pt-rBR.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-th/values-th.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-th_values-th.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sr/values-sr.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sr_values-sr.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es-rUS_values-es-rUS.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sv/values-sv.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sv_values-sv.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tr/values-tr.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v25/values-v25.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v25_values-v25.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rPT_values-pt-rPT.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ro/values-ro.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ro_values-ro.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lt/values-lt.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lt_values-lt.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ky/values-ky.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ky_values-ky.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-te/values-te.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-te_values-te.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ru/values-ru.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ru_values-ru.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ldrtl-v17_values-ldrtl-v17.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ml/values-ml.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ml_values-ml.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bs/values-bs.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bs_values-bs.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-da/values-da.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-da_values-da.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mr/values-mr.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mr_values-mr.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v34/values-v34.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v34_values-v34.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sq/values-sq.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sq_values-sq.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lo/values-lo.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lo_values-lo.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-km/values-km.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-km_values-km.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-my/values-my.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-my_values-my.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ko/values-ko.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h550dp-port-v13/values-h550dp-port-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mk/values-mk.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mk_values-mk.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-cs/values-cs.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-cs_values-cs.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-vi/values-vi.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr-rCA_values-fr-rCA.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tl/values-tl.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tl_values-tl.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w600dp-land-v13/values-w600dp-land-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nl/values-nl.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-nl_values-nl.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rAU_values-en-rAU.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rTW_values-zh-rTW.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lv/values-lv.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lv_values-lv.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr/values-fr.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-eu/values-eu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-eu_values-eu.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uk/values-uk.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uk_values-uk.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-land/values-land.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-land_values-land.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-port/values-port.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-port_values-port.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fa/values-fa.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fa_values-fa.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gu/values-gu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gu_values-gu.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mn/values-mn.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mn_values-mn.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rXC_values-en-rXC.arsc.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_finance.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_finance.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_finance.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_finance.xml.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rGB_values-en-rGB.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ms/values-ms.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ms_values-ms.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+es+419/values-b+es+419.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-b+es+419_values-b+es+419.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es/values-es.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es_values-es.arsc.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_pin_box_active.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_pin_box_active.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/edit_text_color.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_edit_text_color.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_delete.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_delete.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_logout.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_logout.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_loading_dialog.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_loading_dialog.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/menu/main_menu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/menu_main_menu.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_document.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_document.xml.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w400dp-port-v13/values-w400dp-port-v13.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w400dp-port-v13_values-w400dp-port-v13.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-night-v8_values-night-v8.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rCN_values-zh-rCN.arsc.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_announcements.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_announcements.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/menu/drawer_delivery_menu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/menu_drawer_delivery_menu.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_launcher_foreground.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_launcher_foreground.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_main.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_main.xml.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-large-v4_values-large-v4.arsc.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-or/values-or.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-or_values-or.arsc.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_button_warning.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_button_warning.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_pin_box_empty.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_pin_box_empty.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/dialog_report_issue.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_dialog_report_issue.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_chat_message_sent.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_chat_message_sent.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_delivery.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_delivery.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_flag_kenya.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_flag_kenya.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxhdpi_ic_launcher.webp.flat
+Compiling XML table /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pa/values-pa.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pa_values-pa.arsc.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_fertilizer_application.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_fertilizer_application.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/tab_icon_tint.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_tab_icon_tint.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/link_text_color.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_link_text_color.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_dropdown.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_dropdown.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-mdpi_ic_launcher_round.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_new_fertilizer_application.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_new_fertilizer_application.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_warning.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_warning.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_status_pending.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_status_pending.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/menu/profile_menu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/menu_profile_menu.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/view_custom_edit_text.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_view_custom_edit_text.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_notifications.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_notifications.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxxhdpi_ic_launcher.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_view_list.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_view_list.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_pin_box_filled.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_pin_box_filled.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_finance_summary.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_finance_summary.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/dialog_background.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_dialog_background.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_timeout.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_timeout.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_deliveries.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_deliveries.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-mdpi/ic_launcher.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-mdpi_ic_launcher.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/menu/bottom_navigation_menu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/menu_bottom_navigation_menu.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_no_fertilizer.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_no_fertilizer.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_dialog.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_dialog.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_button_text.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_button_text.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/tab_text_color.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_tab_text_color.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_no_search_results.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_no_search_results.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/menu/menu_delivery_filter.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/menu_menu_delivery_filter.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/pressed_states.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_pressed_states.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_add.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_add.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_send.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_send.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_finance_record.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_finance_record.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/button_text_color.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_button_text_color.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-anydpi-v26_ic_launcher_round.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/disabled_states.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_disabled_states.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/button_background_tint.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_button_background_tint.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_check_circle.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_check_circle.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_no_notifications.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_no_notifications.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_application_history.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_application_history.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/nav_header_delivery.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_nav_header_delivery.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_announcement.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_announcement.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_reminder.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_reminder.xml.flat
+/home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/values/attrs.xml:70:4: Duplicate value for resource 'attr/buttonStyle' with config 'DEFAULT' and product ''. Resource was previously defined here: com.farmer.chaitrack.app-mergeDebugResources-2:/values/values.xml:11775: .
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/xml/data_extraction_rules.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/xml_data_extraction_rules.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xhdpi_ic_launcher_round.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_share.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_share.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/bg_button_destructive.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_bg_button_destructive.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_not_found.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_not_found.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_app_logo.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_app_logo.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/button_background.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_button_background.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-hdpi_ic_launcher_round.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_delivery.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_delivery.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/dialog_background.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_dialog_background.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/dialog_loading.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_dialog_loading.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_chat.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_chat.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/dialog_error.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_dialog_error.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_announcement.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_announcement.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/menu/change_pin_dialog.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/menu_change_pin_dialog.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_arrow_drop_down.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_arrow_drop_down.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/message_input_background.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_message_input_background.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_delivery.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_delivery.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_pdf.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_pdf.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/error_states.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_error_states.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_error.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_error.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/color/switch_track_tint.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/color_switch_track_tint.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_fertilizer.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_fertilizer.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_notifications.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_notifications.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/view_custom_button.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_view_custom_button.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_menu.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_menu.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_chat_message_received.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_chat_message_received.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_no_announcements.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_no_announcements.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-xhdpi/ic_launcher.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xhdpi_ic_launcher.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/edit_text_background.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_edit_text_background.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/xml/preferences.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/xml_preferences.xml.flat
+
+Resolve mutations for :app:packageDebugResources (Thread[#129,Execution worker Thread 3,5,main]) started.
+:app:packageDebugResources (Thread[#129,Execution worker Thread 3,5,main]) started.
+
+> Task :app:packageDebugResources UP-TO-DATE
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:packageDebugResources' as it is up-to-date.
+Resolve mutations for :app:parseDebugLocalResources (Thread[#127,Execution worker,5,main]) started.
+:app:parseDebugLocalResources (Thread[#128,Execution worker Thread 2,5,main]) started.
+
+> Task :app:parseDebugLocalResources UP-TO-DATE
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Skipping task ':app:parseDebugLocalResources' as it is up-to-date.
+Resolve mutations for :app:generateDebugBuildConfig (Thread[#127,Execution worker,5,main]) started.
+:app:generateDebugBuildConfig (Thread[#127,Execution worker,5,main]) started.
+
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateDebugBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugBuildConfig' as it is up-to-date.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[#129,Execution worker Thread 3,5,main]) started.
+:app:checkDebugAarMetadata (Thread[#129,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeDebugResources FAILED
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_fertilizer.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_fertilizer.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/unread_indicator.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_unread_indicator.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/status_badge_background.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_status_badge_background.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_back.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_back.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-hdpi/ic_launcher.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-hdpi_ic_launcher.webp.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxhdpi_ic_launcher_round.webp.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_support_chat.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_support_chat.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/notification_badge.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_notification_badge.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_server_error.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_server_error.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_month_year.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_month_year.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_notifications.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_notifications.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/drawable/ic_empty_box.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_empty_box.xml.flat
+Compiling xml file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/anim/shake.xml to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/anim_shake.xml.flat
+Compiling file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp to /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxxhdpi_ic_launcher_round.webp.flat
+/home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml: Failed to compile file
+
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAarMetadata' as it is up-to-date.
+
+[Incubating] Problems report is available at: file:///home/n0fac3/BSIT_Commit/Research_Project/N0Face/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.ResourceCompilerRunnable
+   > Resource compilation failed (Failed to compile values resource file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml. Cause: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@a0d76c6) to table.). Check logs for more details.
+
+* Try:
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:mergeDebugResources'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:40)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.res.ResourceCompilerRunnable
+	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:335)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:318)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:323)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:30)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:27)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:48)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+	at org.gradle.internal.Either$Right.fold(Either.java:175)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:107)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:40)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: com.android.aaptcompiler.ResourceCompilationException: Resource compilation failed (Failed to compile values resource file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml. Cause: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@a0d76c6) to table.). Check logs for more details.
+	at com.android.aaptcompiler.ResourceCompiler.compileResource(ResourceCompiler.kt:129)
+	at com.android.build.gradle.internal.res.ResourceCompilerRunnable$Companion.compileSingleResource(ResourceCompilerRunnable.kt:34)
+	at com.android.build.gradle.internal.res.ResourceCompilerRunnable.run(ResourceCompilerRunnable.kt:15)
+	at com.android.build.gradle.internal.profile.ProfileAwareWorkAction.execute(ProfileAwareWorkAction.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)
+	... 2 more
+Caused by: com.android.aaptcompiler.ResourceCompilationException: Failed to compile values resource file /home/n0fac3/BSIT_Commit/Research_Project/N0Face/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml
+	at com.android.aaptcompiler.ResourceCompiler.compileTable(ResourceCompiler.kt:192)
+	at com.android.aaptcompiler.ResourceCompiler.access$compileTable(ResourceCompiler.kt:1)
+	at com.android.aaptcompiler.ResourceCompiler$getCompileMethod$1.invoke(ResourceCompiler.kt:138)
+	at com.android.aaptcompiler.ResourceCompiler$getCompileMethod$1.invoke(ResourceCompiler.kt:138)
+	at com.android.aaptcompiler.ResourceCompiler.compileResource(ResourceCompiler.kt:123)
+	... 31 more
+Caused by: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@a0d76c6) to table.
+	at com.android.aaptcompiler.TableExtractor.extractResourceValues(TableExtractor.kt:270)
+	at com.android.aaptcompiler.TableExtractor.extract(TableExtractor.kt:181)
+	at com.android.aaptcompiler.ResourceCompiler.compileTable(ResourceCompiler.kt:188)
+	... 35 more
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 16s
+8 actionable tasks: 1 executed, 7 up-to-date

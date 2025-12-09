@@ -12,10 +12,6 @@ import android.widget.TextView
 import com.farmer.chaitrack.R
 import com.farmer.chaitrack.util.Result
 
-/**
- * Reusable error dialog component
- * Shows error messages with an icon and action buttons
- */
 class ErrorDialog(
     context: Context,
     private val title: String? = null,
@@ -34,45 +30,33 @@ class ErrorDialog(
     private lateinit var positiveButton: Button
     private lateinit var negativeButton: Button
 
-    /**
-     * Error types with corresponding icons
-     */
     enum class ErrorType {
-        GENERAL,        // General error
-        NETWORK,        // Network/connectivity error
-        SERVER,         // Server/API error
-        VALIDATION,     // Input validation error
-        AUTH,           // Authentication error
-        NOT_FOUND,      // Resource not found
-        PERMISSION      // Permission denied
+        GENERAL,
+        NETWORK,
+        SERVER,
+        VALIDATION,
+        AUTH,
+        NOT_FOUND,
+        PERMISSION
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Remove title bar
         requestWindowFeature(Window.FEATURE_NO_TITLE)
 
-        // Set content view
         setContentView(R.layout.dialog_error)
 
-        // Make background transparent
         window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        // Set cancellable behavior
         setCancelable(cancellable)
         setCanceledOnTouchOutside(cancellable)
 
-        // Initialize views
         initializeViews()
 
-        // Setup UI
         setupUI()
     }
 
-    /**
-     * Initialize dialog views
-     */
     private fun initializeViews() {
         iconImageView = findViewById(R.id.ivErrorIcon)
         titleTextView = findViewById(R.id.tvErrorTitle)
@@ -81,14 +65,9 @@ class ErrorDialog(
         negativeButton = findViewById(R.id.btnNegative)
     }
 
-    /**
-     * Setup UI elements
-     */
     private fun setupUI() {
-        // Set icon based on error type
         setErrorIcon()
 
-        // Set title
         if (title.isNullOrBlank()) {
             titleTextView.visibility = android.view.View.GONE
         } else {
@@ -96,17 +75,14 @@ class ErrorDialog(
             titleTextView.text = title
         }
 
-        // Set message
         messageTextView.text = message
 
-        // Setup positive button
         positiveButton.text = positiveButtonText
         positiveButton.setOnClickListener {
             onPositiveClick?.invoke()
             dismiss()
         }
 
-        // Setup negative button
         if (negativeButtonText.isNullOrBlank()) {
             negativeButton.visibility = android.view.View.GONE
         } else {
@@ -119,9 +95,6 @@ class ErrorDialog(
         }
     }
 
-    /**
-     * Set error icon based on error type
-     */
     private fun setErrorIcon() {
         val iconRes = when (errorType) {
             ErrorType.NETWORK -> R.drawable.ic_no_network
@@ -135,23 +108,16 @@ class ErrorDialog(
         iconImageView.setImageResource(iconRes)
     }
 
-    /**
-     * Safely dismiss the dialog
-     */
     fun dismissSafely() {
         try {
             if (isShowing) {
                 dismiss()
             }
         } catch (e: Exception) {
-            // Dialog might already be dismissed or context destroyed
         }
     }
 
     companion object {
-        /**
-         * Create and show an error dialog
-         */
         fun show(
             context: Context,
             title: String? = "Error",
@@ -178,9 +144,6 @@ class ErrorDialog(
             return dialog
         }
 
-        /**
-         * Show error from Result.Error
-         */
         fun showFromResult(
             context: Context,
             error: Result.Error,
@@ -216,9 +179,6 @@ class ErrorDialog(
             )
         }
 
-        /**
-         * Show network error with retry option
-         */
         fun showNetworkError(
             context: Context,
             message: String = "Please check your internet connection and try again.",
@@ -235,9 +195,6 @@ class ErrorDialog(
             )
         }
 
-        /**
-         * Show validation error
-         */
         fun showValidationError(
             context: Context,
             message: String
@@ -250,9 +207,6 @@ class ErrorDialog(
             )
         }
 
-        /**
-         * Show server error
-         */
         fun showServerError(
             context: Context,
             message: String = "Something went wrong on our end. Please try again later.",
@@ -269,9 +223,6 @@ class ErrorDialog(
             )
         }
 
-        /**
-         * Show authentication error
-         */
         fun showAuthError(
             context: Context,
             message: String = "Your session has expired. Please login again.",
@@ -291,9 +242,6 @@ class ErrorDialog(
     }
 }
 
-/**
- * Extension function to show error dialog on Context
- */
 fun Context.showErrorDialog(
     title: String? = "Error",
     message: String,
@@ -309,16 +257,10 @@ fun Context.showErrorDialog(
     )
 }
 
-/**
- * Extension function to show error from Result
- */
 fun Context.showError(error: Result.Error, onDismiss: (() -> Unit)? = null): ErrorDialog {
     return ErrorDialog.showFromResult(this, error, onDismiss)
 }
 
-/**
- * Builder class for creating error dialogs with more options
- */
 class ErrorDialogBuilder(private val context: Context) {
     private var title: String? = "Error"
     private var message: String = ""

@@ -16,19 +16,12 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-/**
- * Base Activity class that provides common functionality for all activities
- */
 @AndroidEntryPoint
 abstract class BaseActivity : AppCompatActivity() {
 
     @Inject
     lateinit var sessionManager: SessionManager
 
-    /**
-     * Flag to check if activity requires authentication
-     * Override in child activities to disable authentication check
-     */
     protected open val requiresAuthentication: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,23 +34,14 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Shows a toast message
-     */
     protected fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(this, message, duration).show()
     }
 
-    /**
-     * Shows a long toast message
-     */
     protected fun showLongToast(message: String) {
         showToast(message, Toast.LENGTH_LONG)
     }
 
-    /**
-     * Shows a snackbar message
-     */
     protected fun showSnackbar(
         view: View,
         message: String,
@@ -74,9 +58,6 @@ abstract class BaseActivity : AppCompatActivity() {
         snackbar.show()
     }
 
-    /**
-     * Shows an error snackbar with retry action
-     */
     protected fun showErrorSnackbar(
         view: View,
         message: String,
@@ -91,9 +72,6 @@ abstract class BaseActivity : AppCompatActivity() {
         snackbar.show()
     }
 
-    /**
-     * Shows a confirmation dialog
-     */
     protected fun showConfirmationDialog(
         title: String,
         message: String,
@@ -117,9 +95,6 @@ abstract class BaseActivity : AppCompatActivity() {
             .show()
     }
 
-    /**
-     * Shows an alert dialog with single OK button
-     */
     protected fun showAlertDialog(
         title: String,
         message: String,
@@ -137,9 +112,6 @@ abstract class BaseActivity : AppCompatActivity() {
             .show()
     }
 
-    /**
-     * Shows a loading dialog
-     */
     private var loadingDialog: AlertDialog? = null
 
     protected fun showLoadingDialog(message: String = "Please wait...") {
@@ -154,17 +126,11 @@ abstract class BaseActivity : AppCompatActivity() {
         loadingDialog?.show()
     }
 
-    /**
-     * Dismisses the loading dialog
-     */
     protected fun dismissLoadingDialog() {
         loadingDialog?.dismiss()
         loadingDialog = null
     }
 
-    /**
-     * Hides the keyboard
-     */
     protected fun hideKeyboard() {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         currentFocus?.let {
@@ -172,18 +138,12 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Shows the keyboard for a specific view
-     */
     protected fun showKeyboard(view: View) {
         view.requestFocus()
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT)
     }
 
-    /**
-     * Navigates to login screen and clears back stack
-     */
     protected fun navigateToLogin() {
         val intent = Intent(this, LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -191,9 +151,6 @@ abstract class BaseActivity : AppCompatActivity() {
         finish()
     }
 
-    /**
-     * Handles logout with confirmation
-     */
     protected fun handleLogout() {
         showConfirmationDialog(
             title = "Logout",
@@ -206,26 +163,15 @@ abstract class BaseActivity : AppCompatActivity() {
         )
     }
 
-    /**
-     * Performs logout operation
-     */
     private fun performLogout() {
         sessionManager.clearSession()
         navigateToLogin()
     }
 
-    /**
-     * Checks network connectivity
-     */
     protected fun isNetworkAvailable(): Boolean {
-        // Implementation would check actual network connectivity
-        // For now, returning true
         return true
     }
 
-    /**
-     * Shows network error message
-     */
     protected fun showNetworkError(view: View) {
         showErrorSnackbar(
             view = view,
@@ -233,9 +179,6 @@ abstract class BaseActivity : AppCompatActivity() {
         )
     }
 
-    /**
-     * Handles session expiration
-     */
     protected fun handleSessionExpired() {
         showAlertDialog(
             title = "Session Expired",
@@ -247,9 +190,6 @@ abstract class BaseActivity : AppCompatActivity() {
         )
     }
 
-    /**
-     * Sets up back button in toolbar
-     */
     protected fun setupBackButton() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -266,9 +206,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 }
 
-/**
- * Base Activity for activities that don't require authentication
- */
 abstract class BaseNoAuthActivity : BaseActivity() {
     override val requiresAuthentication: Boolean = false
 }

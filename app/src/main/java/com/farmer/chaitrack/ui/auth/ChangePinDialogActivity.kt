@@ -63,7 +63,6 @@ class ChangePinDialogActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        // Clear errors when user starts typing
         binding.etCurrentPin.doAfterTextChanged {
             viewModel.clearError()
             binding.tilCurrentPin.error = null
@@ -84,7 +83,6 @@ class ChangePinDialogActivity : AppCompatActivity() {
             finishWithAnimation()
         }
 
-        // Change PIN button
         binding.btnChange.setOnClickListener {
             val currentPin = binding.etCurrentPin.text?.toString() ?: ""
             val newPin = binding.etNewPin.text?.toString() ?: ""
@@ -105,23 +103,18 @@ class ChangePinDialogActivity : AppCompatActivity() {
     }
 
     private fun updateUI(state: ChangePinState) {
-        // Show/hide loading
         binding.progressBar.visibility = if (state.isLoading) View.VISIBLE else View.GONE
-
-        // Disable inputs during loading
         binding.etCurrentPin.isEnabled = !state.isLoading
         binding.etNewPin.isEnabled = !state.isLoading
         binding.etConfirmPin.isEnabled = !state.isLoading
         binding.btnChange.isEnabled = !state.isLoading
         binding.btnCancel.isEnabled = !state.isLoading
 
-        // Show error
         if (state.error != null) {
             binding.errorTextView.text = state.error
             binding.errorTextView.visibility = View.VISIBLE
             binding.successTextView.visibility = View.GONE
 
-            // Set error on appropriate field
             when {
                 state.error.contains("current PIN", ignoreCase = true) -> {
                     binding.tilCurrentPin.error = state.error
@@ -141,12 +134,10 @@ class ChangePinDialogActivity : AppCompatActivity() {
             binding.tilConfirmPin.error = null
         }
 
-        // Show success
         if (state.isSuccess) {
             binding.successTextView.visibility = View.VISIBLE
             binding.errorTextView.visibility = View.GONE
 
-            // Show success dialog and finish
             showSuccessAndFinish()
         } else {
             binding.successTextView.visibility = View.GONE

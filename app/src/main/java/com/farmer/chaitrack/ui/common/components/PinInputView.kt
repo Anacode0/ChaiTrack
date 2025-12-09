@@ -16,11 +16,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.farmer.chaitrack.R
 
-/**
- * Custom PIN input view component
- * Displays individual boxes for each PIN digit with masking
- * Supports 5-10 digit PINs as per app requirements
- */
 class PinInputView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -41,15 +36,12 @@ class PinInputView @JvmOverloads constructor(
     init {
         orientation = VERTICAL
 
-        // Inflate layout
         LayoutInflater.from(context).inflate(R.layout.view_pin_input, this, true)
 
-        // Get container and error text
         val pinContainer: LinearLayout = findViewById(R.id.pinContainer)
         errorTextView = findViewById(R.id.tvPinError)
         hiddenEditText = findViewById(R.id.hiddenEditText)
 
-        // Load custom attributes
         attrs?.let {
             val typedArray = context.obtainStyledAttributes(it, R.styleable.PinInputView)
 
@@ -59,26 +51,19 @@ class PinInputView @JvmOverloads constructor(
             typedArray.recycle()
         }
 
-        // Validate PIN length (5-10 as per requirements)
         if (pinLength < 5 || pinLength > 10) {
             pinLength = 6
         }
 
-        // Setup hidden EditText
         setupHiddenEditText()
 
-        // Create PIN boxes
         createPinBoxes(pinContainer)
 
-        // Focus on hidden EditText when container is clicked
         pinContainer.setOnClickListener {
             requestPinFocus()
         }
     }
 
-    /**
-     * Setup the hidden EditText that captures input
-     */
     private fun setupHiddenEditText() {
         hiddenEditText.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_VARIATION_PASSWORD
         hiddenEditText.filters = arrayOf(InputFilter.LengthFilter(pinLength))
@@ -103,9 +88,6 @@ class PinInputView @JvmOverloads constructor(
         })
     }
 
-    /**
-     * Create individual PIN boxes
-     */
     private fun createPinBoxes(container: LinearLayout) {
         container.removeAllViews()
         pinBoxes.clear()
@@ -131,42 +113,31 @@ class PinInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Update PIN boxes with current input
-     */
     private fun updatePinBoxes() {
         for (i in 0 until pinLength) {
             val pinBox = pinBoxes[i]
 
             if (i < currentPin.length) {
-                // Box has a digit
                 pinBox.text = if (isMasked) "●" else currentPin[i].toString()
                 pinBox.setBackgroundResource(R.drawable.bg_pin_box_filled)
             } else if (i == currentPin.length) {
-                // Current input box (cursor position)
                 pinBox.text = ""
                 pinBox.setBackgroundResource(R.drawable.bg_pin_box_active)
             } else {
-                // Empty box
                 pinBox.text = ""
                 pinBox.setBackgroundResource(R.drawable.bg_pin_box_empty)
             }
         }
     }
 
-    /**
-     * Set PIN length (5-10 digits)
-     */
     fun setPinLength(length: Int) {
         if (length in 5..10) {
             this.pinLength = length
             hiddenEditText.filters = arrayOf(InputFilter.LengthFilter(length))
 
-            // Recreate boxes
             val container: LinearLayout = findViewById(R.id.pinContainer)
             createPinBoxes(container)
 
-            // Clear current PIN if it exceeds new length
             if (currentPin.length > length) {
                 clearPin()
             } else {
@@ -175,22 +146,13 @@ class PinInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Set whether PIN should be masked
-     */
     fun setMasked(masked: Boolean) {
         this.isMasked = masked
         updatePinBoxes()
     }
 
-    /**
-     * Get current PIN
-     */
     fun getPin(): String = currentPin
 
-    /**
-     * Set PIN programmatically
-     */
     fun setPin(pin: String) {
         if (pin.length <= pinLength && pin.matches(Regex("^[0-9]*$"))) {
             hiddenEditText.setText(pin)
@@ -198,23 +160,14 @@ class PinInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Clear PIN
-     */
     fun clearPin() {
         hiddenEditText.text?.clear()
         currentPin = ""
         updatePinBoxes()
     }
 
-    /**
-     * Check if PIN is complete
-     */
     fun isPinComplete(): Boolean = currentPin.length == pinLength
 
-    /**
-     * Validate PIN
-     */
     fun validatePin(): Boolean {
         return when {
             currentPin.isEmpty() -> {
@@ -240,128 +193,79 @@ class PinInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Show error message
-     */
     fun showError(message: String) {
         errorTextView.text = message
         errorTextView.visibility = View.VISIBLE
 
-        // Highlight boxes with error
         pinBoxes.forEach { box ->
             box.setBackgroundResource(R.drawable.bg_pin_box_error)
         }
     }
 
-    /**
-     * Clear error
-     */
     fun clearError() {
         errorTextView.visibility = View.GONE
         updatePinBoxes()
     }
 
-    /**
-     * Request focus on PIN input
-     */
     fun requestPinFocus() {
         hiddenEditText.requestFocus()
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.showSoftInput(hiddenEditText, InputMethodManager.SHOW_IMPLICIT)
     }
 
-    /**
-     * Clear focus
-     */
     fun clearPinFocus() {
         hiddenEditText.clearFocus()
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(hiddenEditText.windowToken, 0)
     }
 
-    /**
-     * Set listener for when PIN is completely entered
-     */
     fun setOnPinEnteredListener(listener: (String) -> Unit) {
         onPinEnteredListener = listener
     }
 
-    /**
-     * Set listener for PIN changes
-     */
     fun setOnPinChangedListener(listener: (String, Boolean) -> Unit) {
         onPinChangedListener = listener
     }
 
-    /**
-     * Enable/disable input
-     */
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
         hiddenEditText.isEnabled = enabled
         alpha = if (enabled) 1f else 0.5f
     }
 
-    /**
-     * Shake animation for wrong PIN
-     */
     fun shakeError() {
         val shake = android.view.animation.AnimationUtils.loadAnimation(context, R.anim.shake)
         startAnimation(shake)
 
-        // Also show error styling
         pinBoxes.forEach { box ->
             box.setBackgroundResource(R.drawable.bg_pin_box_error)
         }
 
-        // Reset after animation
         postDelayed({
             updatePinBoxes()
         }, 500)
     }
 
     companion object {
-        /**
-         * Default PIN length for first-time users
-         */
-        const val DEFAULT_PIN_LENGTH = 10 // Phone number length
+        const val DEFAULT_PIN_LENGTH = 10
 
-        /**
-         * Minimum PIN length
-         */
         const val MIN_PIN_LENGTH = 5
-
-        /**
-         * Maximum PIN length
-         */
         const val MAX_PIN_LENGTH = 10
     }
 }
 
-/**
- * Extension function for easy listener setup
- */
 fun PinInputView.onPinEntered(action: (String) -> Unit) {
     setOnPinEnteredListener(action)
 }
 
-/**
- * Extension function for PIN change listener
- */
 fun PinInputView.onPinChanged(action: (String, Boolean) -> Unit) {
     setOnPinChangedListener(action)
 }
 
-/**
- * Extension function to verify PIN matches
- */
 fun PinInputView.matchesPin(otherPin: String): Boolean {
     return getPin() == otherPin
 }
 
-/**
- * Extension function to validate and get PIN
- */
 fun PinInputView.getValidatedPin(): String? {
     return if (validatePin()) {
         getPin()
@@ -370,11 +274,7 @@ fun PinInputView.getValidatedPin(): String? {
     }
 }
 
-/**
- * Extension function for animated clear
- */
 fun PinInputView.clearWithAnimation() {
-    // Fade out animation
     animate()
         .alpha(0f)
         .setDuration(200)

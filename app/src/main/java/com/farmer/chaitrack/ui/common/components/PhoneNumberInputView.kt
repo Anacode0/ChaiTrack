@@ -16,9 +16,6 @@ import androidx.core.content.ContextCompat
 import com.farmer.chaitrack.R
 import com.google.android.material.textfield.TextInputLayout
 
-/**
- * Supports both 07XX XXX XXX and 254XXX XXX XXX formats
- */
 class PhoneNumberInputView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -36,11 +33,8 @@ class PhoneNumberInputView @JvmOverloads constructor(
     private var onPhoneNumberChangedListener: ((String, Boolean) -> Unit)? = null
 
     companion object {
-        // Kenyan phone number patterns
-        private const val MIN_LENGTH = 10 // 0712345678
-        private const val MAX_LENGTH = 13 // 254712345678 or +254712345678
-
-        // Formatting patterns
+        private const val MIN_LENGTH = 10
+        private const val MAX_LENGTH = 13
         private val KENYAN_PATTERN_07 = Regex("^0[17][0-9]{8}$")
         private val KENYAN_PATTERN_254 = Regex("^254[17][0-9]{8}$")
         private val KENYAN_PATTERN_PLUS = Regex("^\\+254[17][0-9]{8}$")
@@ -49,20 +43,16 @@ class PhoneNumberInputView @JvmOverloads constructor(
     init {
         orientation = VERTICAL
 
-        // Inflate layout
         LayoutInflater.from(context).inflate(R.layout.view_phone_number_input, this, true)
 
-        // Initialize views
         textInputLayout = findViewById(R.id.textInputLayout)
         editText = findViewById(R.id.editText)
         countryCodeTextView = findViewById(R.id.tvCountryCode)
         flagImageView = findViewById(R.id.ivFlag)
         errorTextView = findViewById(R.id.tvError)
 
-        // Setup views
         setupViews()
 
-        // Load custom attributes
         attrs?.let {
             val typedArray = context.obtainStyledAttributes(it, R.styleable.PhoneNumberInputView)
 
@@ -76,19 +66,12 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Setup views
-     */
     private fun setupViews() {
-        // Set Kenya flag
         flagImageView.setImageResource(R.drawable.ic_flag_kenya)
         countryCodeTextView.text = countryCode
 
-        // Configure EditText
         editText.inputType = InputType.TYPE_CLASS_PHONE
         editText.filters = arrayOf(InputFilter.LengthFilter(MAX_LENGTH))
-
-        // Add text watcher
         editText.addTextChangedListener(object : TextWatcher {
             private var isFormatting = false
 
@@ -100,7 +83,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
                 val input = s.toString()
                 clearError()
 
-                // Format the number
                 isFormatting = true
                 val formatted = formatPhoneNumber(input)
                 if (formatted != input) {
@@ -118,14 +100,9 @@ class PhoneNumberInputView @JvmOverloads constructor(
         })
     }
 
-    /**
-     * Format phone number as user types
-     */
     private fun formatPhoneNumber(input: String): String {
-        // Remove all non-digit characters except +
         val cleaned = input.replace(Regex("[^0-9+]"), "")
 
-        // Remove + if it's not at the start
         val normalized = if (cleaned.startsWith("+")) {
             "+" + cleaned.substring(1).replace("+", "")
         } else {
@@ -133,7 +110,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
 
         return when {
-            // Starting with +254
             normalized.startsWith("+254") -> {
                 val digits = normalized.substring(4)
                 when {
@@ -142,7 +118,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
                     else -> "+254 ${digits.substring(0, 3)} ${digits.substring(3, 6)} ${digits.substring(6)}"
                 }
             }
-            // Starting with 254
             normalized.startsWith("254") -> {
                 val digits = normalized.substring(3)
                 when {
@@ -151,7 +126,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
                     else -> "254 ${digits.substring(0, 3)} ${digits.substring(3, 6)} ${digits.substring(6)}"
                 }
             }
-            // Starting with 0 (local format)
             normalized.startsWith("0") -> {
                 when {
                     normalized.length <= 4 -> normalized
@@ -159,14 +133,10 @@ class PhoneNumberInputView @JvmOverloads constructor(
                     else -> "${normalized.substring(0, 4)} ${normalized.substring(4, 7)} ${normalized.substring(7)}"
                 }
             }
-            // Just digits
             else -> normalized
         }
     }
 
-    /**
-     * Get normalized phone number (254XXXXXXXXX format)
-     */
     fun getNormalizedNumber(): String {
         val cleaned = editText.text.toString().replace(Regex("[^0-9]"), "")
 
@@ -178,9 +148,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Get phone number in local format (07XXXXXXXX)
-     */
     fun getLocalFormat(): String {
         val normalized = getNormalizedNumber()
         return if (normalized.startsWith("254")) {
@@ -190,9 +157,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Get phone number in international format (+254XXXXXXXXX)
-     */
     fun getInternationalFormat(): String {
         val normalized = getNormalizedNumber()
         return if (normalized.startsWith("254")) {
@@ -202,9 +166,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Validate phone number
-     */
     fun isValidPhoneNumber(): Boolean {
         val cleaned = editText.text.toString().replace(Regex("[^0-9+]"), "")
 
@@ -216,9 +177,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Validate with error display
-     */
     fun validate(): Boolean {
         val input = editText.text.toString()
 
@@ -238,91 +196,55 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Set phone number
-     */
     fun setPhoneNumber(phoneNumber: String) {
         editText.setText(phoneNumber)
     }
 
-    /**
-     * Get raw input
-     */
     fun getRawInput(): String {
         return editText.text.toString()
     }
 
-    /**
-     * Clear phone number
-     */
     fun clearPhoneNumber() {
         editText.text?.clear()
     }
 
-    /**
-     * Set hint
-     */
     fun setHint(hint: String) {
         textInputLayout.hint = hint
     }
 
-    /**
-     * Set hint from resource
-     */
     fun setHint(hintRes: Int) {
         setHint(context.getString(hintRes))
     }
 
-    /**
-     * Show error message
-     */
     fun showError(message: String) {
         errorTextView.text = message
         errorTextView.visibility = View.VISIBLE
-        textInputLayout.error = " " // Space to show error state
+        textInputLayout.error = " "
     }
 
-    /**
-     * Clear error
-     */
     fun clearError() {
         errorTextView.visibility = View.GONE
         textInputLayout.error = null
     }
 
-    /**
-     * Check if empty
-     */
     fun isEmpty(): Boolean {
         return editText.text.toString().replace(Regex("[^0-9]"), "").isEmpty()
     }
 
-    /**
-     * Set phone number changed listener
-     */
     fun setOnPhoneNumberChangedListener(listener: (String, Boolean) -> Unit) {
         onPhoneNumberChangedListener = listener
     }
 
-    /**
-     * Request focus
-     */
     override fun requestFocus(direction: Int, previouslyFocusedRect: android.graphics.Rect?): Boolean {
         return editText.requestFocus(direction, previouslyFocusedRect)
     }
 
-    /**
-     * Set enabled state
-     */
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
         editText.isEnabled = enabled
         alpha = if (enabled) 1f else 0.5f
     }
 
-    /**
-     * Get phone number type (Safaricom, Airtel, etc.)
-     */
     fun getPhoneNumberType(): PhoneNumberType {
         val normalized = getNormalizedNumber()
 
@@ -336,9 +258,6 @@ class PhoneNumberInputView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Phone number type enum
-     */
     enum class PhoneNumberType {
         SAFARICOM,
         AIRTEL,
@@ -348,16 +267,10 @@ class PhoneNumberInputView @JvmOverloads constructor(
     }
 }
 
-/**
- * Extension function for easy listener setup
- */
 fun PhoneNumberInputView.onPhoneNumberChanged(action: (String, Boolean) -> Unit) {
     setOnPhoneNumberChangedListener(action)
 }
 
-/**
- * Extension function to get validated phone number
- */
 fun PhoneNumberInputView.getValidatedPhoneNumber(): String? {
     return if (validate()) {
         getNormalizedNumber()
@@ -366,16 +279,10 @@ fun PhoneNumberInputView.getValidatedPhoneNumber(): String? {
     }
 }
 
-/**
- * Extension function to check if phone number matches
- */
 fun PhoneNumberInputView.matchesPhoneNumber(otherNumber: String): Boolean {
     return getNormalizedNumber() == otherNumber
 }
 
-/**
- * Extension function to format and set phone number
- */
 fun PhoneNumberInputView.setAndFormatPhoneNumber(phoneNumber: String) {
     // Remove all non-digits
     val cleaned = phoneNumber.replace(Regex("[^0-9]"), "")
@@ -390,9 +297,6 @@ fun PhoneNumberInputView.setAndFormatPhoneNumber(phoneNumber: String) {
     setPhoneNumber(normalized)
 }
 
-/**
- * Extension function to display phone number in masked format
- */
 fun PhoneNumberInputView.getMaskedNumber(): String {
     val number = getRawInput()
     return if (number.length >= 10) {
@@ -402,17 +306,11 @@ fun PhoneNumberInputView.getMaskedNumber(): String {
     }
 }
 
-/**
- * Extension function to check if it's a Kenyan number
- */
 fun PhoneNumberInputView.isKenyanNumber(): Boolean {
     val normalized = getNormalizedNumber()
     return normalized.startsWith("254") && normalized.length == 12
 }
 
-/**
- * Extension function to get carrier info
- */
 fun PhoneNumberInputView.getCarrierName(): String {
     return when (getPhoneNumberType()) {
         PhoneNumberInputView.PhoneNumberType.SAFARICOM -> "Safaricom"
