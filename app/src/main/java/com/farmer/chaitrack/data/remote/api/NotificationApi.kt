@@ -34,7 +34,7 @@ interface NotificationApi {
     @GET("notifications/type")
     suspend fun getNotificationsByType(
         @Header("Authorization") token: String,
-        @Query("type") type: String, // DELIVERY, FERTILIZER, FINANCE, ANNOUNCEMENT, SYSTEM
+        @Query("type") type: String,
         @Query("page") page: Int = 1,
         @Query("limit") limit: Int = 50
     ): Response<NotificationsResponse>
@@ -42,7 +42,7 @@ interface NotificationApi {
     @GET("notifications/priority")
     suspend fun getNotificationsByPriority(
         @Header("Authorization") token: String,
-        @Query("priority") priority: String, // LOW, NORMAL, HIGH, URGENT
+        @Query("priority") priority: String
         @Query("page") page: Int = 1,
         @Query("limit") limit: Int = 50
     ): Response<NotificationsResponse>
