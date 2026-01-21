@@ -16,16 +16,6 @@ import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 import javax.inject.Inject
 
-/**
- * ChaiTrack Application Class
- *
- * Main application class that initializes core components including:
- * - Dependency injection (Hilt)
- * - Logging (Timber)
- * - Notification channels
- * - Session management
- * - WorkManager for background tasks
- */
 @HiltAndroidApp
 class ChaiTrackApplication : Application(), Configuration.Provider {
 
@@ -52,43 +42,35 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
         super.onCreate()
         instance = this
 
-        // Initialize Timber for logging
+        
         initializeLogging()
 
-        // Create notification channels for Android O and above
+        
         createNotificationChannels()
 
-        // Register lifecycle observer to handle app foreground/background
+        
         appLifecycleObserver.register()
 
-        // Log application start
+        
         Timber.i("ChaiTrack Application initialized successfully")
     }
 
-    /**
-     * Initialize Timber logging based on build type
-     */
+    
     private fun initializeLogging() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
             Timber.d("Timber logging initialized in DEBUG mode")
         } else {
-            // In production, you might want to plant a custom tree
-            // that logs to a crash reporting service like Firebase Crashlytics
+            
             Timber.plant(ReleaseTree())
         }
     }
 
-    /**
-     * Create notification channels for different types of notifications
-     * Required for Android O (API 26) and above
-     */
     private fun createNotificationChannels() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val notificationManager =
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-            // General notifications channel
             val generalChannel = NotificationChannel(
                 NOTIFICATION_CHANNEL_GENERAL,
                 "General Notifications",
@@ -99,7 +81,6 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
                 enableVibration(true)
             }
 
-            // Deliveries notifications channel
             val deliveriesChannel = NotificationChannel(
                 NOTIFICATION_CHANNEL_DELIVERIES,
                 "Delivery Updates",
@@ -110,7 +91,6 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
                 enableVibration(true)
             }
 
-            // Fertilizer notifications channel
             val fertilizerChannel = NotificationChannel(
                 NOTIFICATION_CHANNEL_FERTILIZER,
                 "Fertilizer Updates",
@@ -121,7 +101,6 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
                 enableVibration(false)
             }
 
-            // Finance notifications channel
             val financeChannel = NotificationChannel(
                 NOTIFICATION_CHANNEL_FINANCE,
                 "Finance Updates",
@@ -132,7 +111,6 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
                 enableVibration(true)
             }
 
-            // Register all channels
             notificationManager.createNotificationChannels(
                 listOf(
                     generalChannel,
@@ -146,40 +124,26 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
         }
     }
 
-    /**
-     * Provide WorkManager configuration - Required by Configuration.Provider interface
-     */
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
             .setWorkerFactory(workerFactory)
             .setMinimumLoggingLevel(Log.INFO)
             .build()
 
-    /**
-     * Custom Timber tree for release builds
-     * Prevents sensitive logs from being written in production
-     */
     private class ReleaseTree : Timber.Tree() {
         override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-            // Only log warnings and errors in production
+            
             if (priority == android.util.Log.WARN || priority == android.util.Log.ERROR) {
-                // Here you would send logs to your crash reporting service
-                // FirebaseCrashlytics.getInstance().log(message)
             }
         }
     }
 
-    /**
-     * Clear all app data (useful for logout)
-     */
     fun clearApplicationData() {
         try {
             sessionManager.clearSession()
 
-            // Clear cache
             cacheDir?.deleteRecursively()
 
-            // Clear WorkManager jobs
             WorkManager.getInstance(this).cancelAllWork()
 
             Timber.d("Application data cleared successfully")
@@ -188,9 +152,6 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
         }
     }
 
-    /**
-     * Get application version name
-     */
     fun getAppVersionName(): String {
         return try {
             packageManager.getPackageInfo(packageName, 0).versionName ?: "Unknown"
@@ -200,9 +161,6 @@ class ChaiTrackApplication : Application(), Configuration.Provider {
         }
     }
 
-    /**
-     * Get application version code
-     */
     fun getAppVersionCode(): Long {
         return try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
